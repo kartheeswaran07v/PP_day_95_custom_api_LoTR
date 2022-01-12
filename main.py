@@ -1,8 +1,8 @@
 import requests
-from flask import Flask, render_template, redirect, url_for
+from flask import Flask, render_template
 from flask_bootstrap import Bootstrap
 from flask_wtf import FlaskForm
-from wtforms import StringField, SubmitField, SelectField
+from wtforms import StringField, SubmitField
 from wtforms.validators import DataRequired
 import time
 from random import randint
@@ -51,7 +51,7 @@ def home():
         # get details of name
         character_name = form.name.data
         dictionary = get_info(character_name)
-        # pass the value to index.html
+        # pass the value to char.html
         return render_template("char.html", data=dictionary)
 
     if form_2.validate_on_submit():
