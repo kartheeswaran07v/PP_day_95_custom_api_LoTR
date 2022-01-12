@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1> {{ data['name'] }}</h1>
+    <p> Gender: {{ data['gender'] }}</p>
+    <p> Race: {{ data['race'] }}</p>
+    <p> Death: {{ data['death'] }}</p>
+    <p> <a href="{{ data['wikiUrl'] }}"> Wiki</a></p>
+    <p class="space-above"><a href="{{ url_for('home') }}">Go to Home</a></p>
+</body>
+</html>
